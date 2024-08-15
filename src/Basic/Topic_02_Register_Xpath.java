@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Topic_02_Xpath {
+public class Topic_02_Register_Xpath {
 	WebDriver driver;
 
 	//@Test
