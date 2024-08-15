@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Basic.Topic_01_Selenium_Locator">
+      <class name="Basic.Topic_02_Xpath">
         <methods>
-          <include name="AfterClass"/>
-          <include name="TC_03_Class"/>
-          <include name="BeforeClass"/>
+          <include name="TC_06_Register_with_invalid_Phone_number"/>
+          <include name="TC_07_Register_with_invalid_mobile_networ_prefixes"/>
         </methods>
-      </class> <!-- Basic.Topic_01_Selenium_Locator -->
+      </class> <!-- Basic.Topic_02_Xpath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

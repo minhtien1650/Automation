@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-13T21:01:01 ICT" name="Default suite" finished-at="2024-08-13T21:01:09 ICT" duration-ms="8513">
+  <suite started-at="2024-08-15T22:21:35 ICT" name="Default suite" finished-at="2024-08-15T22:22:27 ICT" duration-ms="51501">
     <groups>
     </groups>
-    <test started-at="2024-08-13T21:01:01 ICT" name="Default test" finished-at="2024-08-13T21:01:09 ICT" duration-ms="8513">
-      <class name="Basic.Topic_01_Selenium_Locator">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:Basic.Topic_01_Selenium_Locator@7586beff]" started-at="2024-08-13T21:01:01 ICT" name="BeforeClass" finished-at="2024-08-13T21:01:01 ICT" duration-ms="17" status="PASS">
+    <test started-at="2024-08-15T22:21:35 ICT" name="Default test" finished-at="2024-08-15T22:22:27 ICT" duration-ms="51501">
+      <class name="Basic.Topic_02_Xpath">
+        <test-method signature="TC_06_Register_with_invalid_Phone_number()[pri:0, instance:Basic.Topic_02_Xpath@73a1e9a9]" started-at="2024-08-15T22:21:35 ICT" name="TC_06_Register_with_invalid_Phone_number" finished-at="2024-08-15T22:22:01 ICT" duration-ms="26067" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="TC_02_ID()[pri:0, instance:Basic.Topic_01_Selenium_Locator@7586beff]" started-at="2024-08-13T21:01:01 ICT" name="TC_02_ID" finished-at="2024-08-13T21:01:09 ICT" duration-ms="8432" status="PASS">
+        </test-method> <!-- TC_06_Register_with_invalid_Phone_number -->
+        <test-method signature="TC_07_Register_with_invalid_mobile_networ_prefixes()[pri:0, instance:Basic.Topic_02_Xpath@73a1e9a9]" started-at="2024-08-15T22:22:01 ICT" name="TC_07_Register_with_invalid_mobile_networ_prefixes" finished-at="2024-08-15T22:22:27 ICT" duration-ms="25364" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_ID -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:Basic.Topic_01_Selenium_Locator@7586beff]" started-at="2024-08-13T21:01:09 ICT" name="AfterClass" finished-at="2024-08-13T21:01:09 ICT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- Basic.Topic_01_Selenium_Locator -->
+        </test-method> <!-- TC_07_Register_with_invalid_mobile_networ_prefixes -->
+      </class> <!-- Basic.Topic_02_Xpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
