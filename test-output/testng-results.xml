@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-15T22:21:35 ICT" name="Default suite" finished-at="2024-08-15T22:22:27 ICT" duration-ms="51501">
+  <suite started-at="2024-08-15T22:49:53 ICT" name="Default suite" finished-at="2024-08-15T22:50:06 ICT" duration-ms="12947">
     <groups>
     </groups>
-    <test started-at="2024-08-15T22:21:35 ICT" name="Default test" finished-at="2024-08-15T22:22:27 ICT" duration-ms="51501">
-      <class name="Basic.Topic_02_Xpath">
-        <test-method signature="TC_06_Register_with_invalid_Phone_number()[pri:0, instance:Basic.Topic_02_Xpath@73a1e9a9]" started-at="2024-08-15T22:21:35 ICT" name="TC_06_Register_with_invalid_Phone_number" finished-at="2024-08-15T22:22:01 ICT" duration-ms="26067" status="PASS">
+    <test started-at="2024-08-15T22:49:53 ICT" name="Default test" finished-at="2024-08-15T22:50:06 ICT" duration-ms="12947">
+      <class name="Basic.Topic_03_Login_Xpath">
+        <test-method signature="TC_01_Login_with_empty_email_password()[pri:0, instance:Basic.Topic_03_Login_Xpath@235834f2]" started-at="2024-08-15T22:49:53 ICT" name="TC_01_Login_with_empty_email_password" finished-at="2024-08-15T22:50:06 ICT" duration-ms="12863" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_06_Register_with_invalid_Phone_number -->
-        <test-method signature="TC_07_Register_with_invalid_mobile_networ_prefixes()[pri:0, instance:Basic.Topic_02_Xpath@73a1e9a9]" started-at="2024-08-15T22:22:01 ICT" name="TC_07_Register_with_invalid_mobile_networ_prefixes" finished-at="2024-08-15T22:22:27 ICT" duration-ms="25364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_07_Register_with_invalid_mobile_networ_prefixes -->
-      </class> <!-- Basic.Topic_02_Xpath -->
+        </test-method> <!-- TC_01_Login_with_empty_email_password -->
+      </class> <!-- Basic.Topic_03_Login_Xpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
