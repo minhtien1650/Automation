@@ -30,4 +30,64 @@ public class Topic_03_Login_Xpath {
 		
 		driver.quit();
 	}
+	
+	@Test
+	public void TC_02_Login_with_invalid_email(){
+		driver = new EdgeDriver();
+
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("1234@123.123");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123456");
+
+		driver.findElement(By.xpath("//button[@id='send2']")).click();
+
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-email-email']")).getText(),
+				"Please enter a valid email address. For example johndoe@domain.com.");
+		
+		driver.quit();
+	}
+	
+	@Test
+	public void TC_03_Login_with_password_less_than_6_characters(){
+		driver = new EdgeDriver();
+
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("automation@gmail.com");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123");
+
+		driver.findElement(By.xpath("//button[@id='send2']")).click();
+
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-password-pass']")).getText(),
+				"Please enter 6 or more characters without leading or trailing spaces.");
+		
+		driver.quit();
+	}
+		
+	@Test
+	public void TC_04_Login_with_incorrect_email_password(){
+		driver = new EdgeDriver();
+
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("automation@gmail.com");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123456789");
+
+		driver.findElement(By.xpath("//button[@id='send2']")).click();
+
+		Assert.assertEquals(driver.findElement(By.xpath("//li[@class='error-msg']//span")).getText(),
+				"Invalid login or password.");
+		
+		driver.quit();
+	}
 }
