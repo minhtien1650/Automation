@@ -5,15 +5,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
 
 public class Topic_03_Login_Xpath {
 	WebDriver driver;
+	
+	@BeforeClass
+	public void BeforeClass() {
+		driver = new EdgeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		
+		driver.get("http://live.techpanda.org/");	
+	}
 
 	@Test
 	public void TC_01_Login_with_empty_email_password() {
-		driver = new EdgeDriver();
+		//driver = new EdgeDriver();
 
-		driver.get("http://live.techpanda.org/");
+		//driver.get("http://live.techpanda.org/");
 
 		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
 		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
@@ -26,16 +37,14 @@ public class Topic_03_Login_Xpath {
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-email']")).getText(),
 				"This is a required field.");
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-pass']")).getText(),
-				"This is a required field.");
-		
-		driver.quit();
+				"This is a required field.");		
 	}
 	
 	@Test
 	public void TC_02_Login_with_invalid_email(){
-		driver = new EdgeDriver();
+		//driver = new EdgeDriver();
 
-		driver.get("http://live.techpanda.org/");
+		//driver.get("http://live.techpanda.org/");
 
 		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
 		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
@@ -48,14 +57,14 @@ public class Topic_03_Login_Xpath {
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-email-email']")).getText(),
 				"Please enter a valid email address. For example johndoe@domain.com.");
 		
-		driver.quit();
+		//driver.quit();
 	}
 	
 	@Test
 	public void TC_03_Login_with_password_less_than_6_characters(){
-		driver = new EdgeDriver();
+		//driver = new EdgeDriver();
 
-		driver.get("http://live.techpanda.org/");
+		//driver.get("http://live.techpanda.org/");
 
 		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
 		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
@@ -68,14 +77,14 @@ public class Topic_03_Login_Xpath {
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-password-pass']")).getText(),
 				"Please enter 6 or more characters without leading or trailing spaces.");
 		
-		driver.quit();
+		//driver.quit();
 	}
 		
 	@Test
 	public void TC_04_Login_with_incorrect_email_password(){
-		driver = new EdgeDriver();
+		//driver = new EdgeDriver();
 
-		driver.get("http://live.techpanda.org/");
+		//driver.get("http://live.techpanda.org/");
 
 		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
 		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
@@ -88,6 +97,11 @@ public class Topic_03_Login_Xpath {
 		Assert.assertEquals(driver.findElement(By.xpath("//li[@class='error-msg']//span")).getText(),
 				"Invalid login or password.");
 		
+		//driver.quit();
+	}
+	
+	@AfterClass
+	public void AfterClass() {
 		driver.quit();
 	}
 }
