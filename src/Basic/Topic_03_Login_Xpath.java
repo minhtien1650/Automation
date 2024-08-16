@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 
 public class Topic_03_Login_Xpath {
 	WebDriver driver;
