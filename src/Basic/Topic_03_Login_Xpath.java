@@ -20,6 +20,9 @@ public class Topic_03_Login_Xpath {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
 		driver.get("http://live.techpanda.org/");	
+
+		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
 	}
 
 	@Test
@@ -28,8 +31,10 @@ public class Topic_03_Login_Xpath {
 
 		//driver.get("http://live.techpanda.org/");
 
-		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
-		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+		//driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		//driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.navigate().refresh();
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("");
@@ -48,8 +53,10 @@ public class Topic_03_Login_Xpath {
 
 		//driver.get("http://live.techpanda.org/");
 
-		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
-		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+		//driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		//driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.navigate().refresh();
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("1234@123.123");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123456");
@@ -68,8 +75,10 @@ public class Topic_03_Login_Xpath {
 
 		//driver.get("http://live.techpanda.org/");
 
-		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
-		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+		//driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		//driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.navigate().refresh();
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("automation@gmail.com");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123");
@@ -88,8 +97,10 @@ public class Topic_03_Login_Xpath {
 
 		//driver.get("http://live.techpanda.org/");
 
-		driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
-		driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+		//driver.findElement(By.xpath("//a[@class='skip-link skip-account']")).click();
+		//driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+
+		driver.navigate().refresh();
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("automation@gmail.com");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("123456789");
