@@ -6,13 +6,8 @@
       <class name="Basic.Topic_09_Xpath_CSS_II">
         <methods>
           <include name="BeforeMethod"/>
-          <include name="TC_04_Incorrect_Confirm_Email"/>
-          <include name="TC_03_Invalid_Email"/>
-          <include name="TC_06_Incorrect_Confirm_Password"/>
-          <include name="TC_02_Empty"/>
           <include name="afterClass"/>
-          <include name="TC_07_Invalid_Phone"/>
-          <include name="TC_05_Password_less_than_6_chars"/>
+          <include name="contains_concat_"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Basic.Topic_09_Xpath_CSS_II -->
