@@ -1,65 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-18T01:37:24 ICT" name="Default suite" finished-at="2024-08-18T01:39:36 ICT" duration-ms="132013">
+  <suite started-at="2024-08-18T02:39:30 ICT" name="Default suite" finished-at="2024-08-18T02:39:40 ICT" duration-ms="9339">
     <groups>
     </groups>
-    <test started-at="2024-08-18T01:37:24 ICT" name="Default test" finished-at="2024-08-18T01:39:36 ICT" duration-ms="132013">
+    <test started-at="2024-08-18T02:39:30 ICT" name="Default test" finished-at="2024-08-18T02:39:40 ICT" duration-ms="9339">
       <class name="Basic.Topic_09_Xpath_CSS_II">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:37:24 ICT" name="beforeClass" finished-at="2024-08-18T01:37:31 ICT" duration-ms="7651" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:30 ICT" name="beforeClass" finished-at="2024-08-18T02:39:35 ICT" duration-ms="4406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:37:31 ICT" name="BeforeMethod" finished-at="2024-08-18T01:37:52 ICT" duration-ms="20366" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:35 ICT" name="BeforeMethod" finished-at="2024-08-18T02:39:36 ICT" duration-ms="1764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_02_Empty()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:37:52 ICT" name="TC_02_Empty" finished-at="2024-08-18T01:37:52 ICT" duration-ms="497" status="PASS">
+        <test-method signature="contains_concat_()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:36 ICT" name="contains_concat_" finished-at="2024-08-18T02:39:38 ICT" duration-ms="1789" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_Empty -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:37:52 ICT" name="BeforeMethod" finished-at="2024-08-18T01:38:12 ICT" duration-ms="19951" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_03_Invalid_Email()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:12 ICT" name="TC_03_Invalid_Email" finished-at="2024-08-18T01:38:13 ICT" duration-ms="857" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Invalid_Email -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:13 ICT" name="BeforeMethod" finished-at="2024-08-18T01:38:33 ICT" duration-ms="19642" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_04_Incorrect_Confirm_Email()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:33 ICT" name="TC_04_Incorrect_Confirm_Email" finished-at="2024-08-18T01:38:33 ICT" duration-ms="669" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_04_Incorrect_Confirm_Email -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:33 ICT" name="BeforeMethod" finished-at="2024-08-18T01:38:53 ICT" duration-ms="19794" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_05_Password_less_than_6_chars()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:53 ICT" name="TC_05_Password_less_than_6_chars" finished-at="2024-08-18T01:38:54 ICT" duration-ms="885" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_05_Password_less_than_6_chars -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:38:54 ICT" name="BeforeMethod" finished-at="2024-08-18T01:39:14 ICT" duration-ms="19604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_06_Incorrect_Confirm_Password()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:39:14 ICT" name="TC_06_Incorrect_Confirm_Password" finished-at="2024-08-18T01:39:14 ICT" duration-ms="701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_06_Incorrect_Confirm_Password -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:39:14 ICT" name="BeforeMethod" finished-at="2024-08-18T01:39:34 ICT" duration-ms="19772" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="TC_07_Invalid_Phone()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:39:34 ICT" name="TC_07_Invalid_Phone" finished-at="2024-08-18T01:39:35 ICT" duration-ms="1328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_07_Invalid_Phone -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@3bf7ca37]" started-at="2024-08-18T01:39:35 ICT" name="afterClass" finished-at="2024-08-18T01:39:36 ICT" duration-ms="139" status="PASS">
+        </test-method> <!-- contains_concat_ -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:38 ICT" name="afterClass" finished-at="2024-08-18T02:39:40 ICT" duration-ms="1317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

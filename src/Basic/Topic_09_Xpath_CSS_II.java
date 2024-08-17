@@ -49,10 +49,44 @@ public class Topic_09_Xpath_CSS_II {
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 	}
 
-	// @Test
+	@Test
+	public void Lesson() {
+		driver.get("https://automationfc.github.io/basic-form/");
+
+		// 1 - Tìm tương đối (contains)
+		// cpntains(text(),"")
+		// - Text nó nằm trên chính node chứa đó
+		// - Dạng nested text nhưng text phải nằm ở index đầu tiên
+		// - Text này có khoảng trắng/xuống dòng/tab ở đầu hoặc cuối text vẫn work đước
+		// Tìm kiếm tên Michael Jackson bằng phương pháp này cho ra 4 kết quả
+		Assert.assertEquals(driver.findElements(By.xpath("//h5[contains(text(),'Michael Jackson')]")).size(), 4);
+
+		// contain(.,"")
+		// - Text nó nằm ở chính node đó
+		// - hoặc nằm ở trong child node bất kỳ vị trí nào
+		// - hoặc nằm trong nested text ở bất kỳ vị trí nào
+		// - Text này có khoảng trắng/xuống dòng/tab ở đầu hoặc cuối text vẫn work đước
+		// Tìm kiếm tên Michael Jackson bằng phương pháp này cho ra 8 kết quả
+		Assert.assertEquals(driver.findElements(By.xpath("//h5[contains(.,'Michael Jackson')]")).size(), 8);
+
+		// contain(string(),""): tương đương cách dùng contain(.,"")
+		// Tìm kiếm tên Michael Jackson bằng phương pháp này cho ra 8 kết quả
+		Assert.assertEquals(driver.findElements(By.xpath("//h5[contains(string(),'Michael Jackson')]")).size(), 8);
+
+		// 2 - Nối chuỗi (concat)
+		// Dùng trong trường hợp Text vừa có dấu nháy đôi vừa có dấu nháy đơn
+		// Với text (Hello "John", What's happened?)
+		// cần chia ra làm 2 chuỗi ('Hello "John", What') và ("'s happened?")
+		// dùng concat để nối 2 chuỗi với nhau
+		Assert.assertEquals(driver
+				.findElement(By.xpath("//span[text()=concat('Hello \"John\", What',\"'s happened?\")]")).getText(),
+				"Hello \"John\", What's happened?");
+	}
+
+	 @Test
 	public void TC_01_Verify_Text() {
 		driver.get("https://automationfc.github.io/basic-form/");
-		
+
 		// 1 - Get text của Element đó ra 1 biết
 		// Biết này để kiểm tra chứa Text mong muốn hay không -> Java String (contains)
 		String populationValue = driver.findElement(By.xpath("//div[@id='population']")).getText();
@@ -65,7 +99,7 @@ public class Topic_09_Xpath_CSS_II {
 				.isDisplayed());
 	}
 
-	@Test
+	 @Test
 	public void TC_02_Empty() {
 		driver.findElement(registerButtonBy).click();
 
@@ -77,7 +111,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(phoneErrorBy).getText(), "Vui lòng nhập số điện thoại.");
 	}
 
-	@Test
+	 @Test
 	public void TC_03_Invalid_Email() {
 		// 123@123.234@
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -93,7 +127,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmEmailErrorBy).getText(), "Email nhập lại không đúng");
 	}
 
-	@Test
+	 @Test
 	public void TC_04_Incorrect_Confirm_Email() {
 		// Email nhập lại không đúng
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -108,7 +142,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmEmailErrorBy).getText(), "Email nhập lại không đúng");
 	}
 
-	@Test
+	 @Test
 	public void TC_05_Password_less_than_6_chars() {
 		// Mật khẩu ít hơn 6 ký tự
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -124,7 +158,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmPasswordErrorBy).getText(), "Mật khẩu phải có ít nhất 6 ký tự");
 	}
 
-	@Test
+	 @Test
 	public void TC_06_Incorrect_Confirm_Password() {
 		// Mật khẩu nhập lại không đúng
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -139,7 +173,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmPasswordErrorBy).getText(), "Mật khẩu bạn nhập không khớp");
 	}
 
-	@Test
+	 @Test
 	public void TC_07_Invalid_Phone() {
 		// Vui lòng nhập số
 		driver.findElement(nameTextboxBy).sendKeys(name);
