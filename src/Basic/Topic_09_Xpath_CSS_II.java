@@ -51,6 +51,8 @@ public class Topic_09_Xpath_CSS_II {
 
 	// @Test
 	public void TC_01_Verify_Text() {
+		driver.get("https://automationfc.github.io/basic-form/");
+		
 		// 1 - Get text của Element đó ra 1 biết
 		// Biết này để kiểm tra chứa Text mong muốn hay không -> Java String (contains)
 		String populationValue = driver.findElement(By.xpath("//div[@id='population']")).getText();
