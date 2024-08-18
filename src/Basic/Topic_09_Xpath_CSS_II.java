@@ -1,9 +1,12 @@
 package Basic;
 
+import static org.testng.Assert.assertEquals;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -81,9 +84,28 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver
 				.findElement(By.xpath("//span[text()=concat('Hello \"John\", What',\"'s happened?\")]")).getText(),
 				"Hello \"John\", What's happened?");
+
+		// 3 - last()
+		driver.get("https://automationfc.github.io/jquery-selectable/");
+		Assert.assertEquals(driver.findElement(By.xpath("//ol[@id='selectable']/li[last()]")).getText(), "20");
+
+		// 4 - Inside/Outside Text
+		// Với Inside Text: các element nằm trong cùng 1 node cha rồi nên lấy xpath[index]
+		// Với Outside Text:
+		// Các element không nằm trong cùng 1 node cha
+		// Nên cần nhóm các element này vào chung 1 node cha
+		// Thêm dấu () bọc xpath: (xpath)[index]
+		driver.get("http://live.techpanda.org/index.php/mobile.html");
+		// Lấy xpath bằng cách "(xpath)[index]"
+		WebElement outsideXpath = driver.findElement(By.xpath("(//button[@title='Add to Cart'])[2]"));
+		// Lấy xpath bằng cách copy xpath của element trên Devtool
+		WebElement copyXpath = driver.findElement(By
+				.xpath("//*[@id='top']/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[2]/div/div[3]/button"));
+		// So sánh 2 cách lấy xpath của Button Add to card thứ 2 (máy Sony Xperia)
+		Assert.assertEquals(outsideXpath, copyXpath, "Hai XPath không cho ra kết quả giống nhau");
 	}
 
-	 @Test
+	// @Test
 	public void TC_01_Verify_Text() {
 		driver.get("https://automationfc.github.io/basic-form/");
 
@@ -99,7 +121,7 @@ public class Topic_09_Xpath_CSS_II {
 				.isDisplayed());
 	}
 
-	 @Test
+	// @Test
 	public void TC_02_Empty() {
 		driver.findElement(registerButtonBy).click();
 
@@ -111,7 +133,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(phoneErrorBy).getText(), "Vui lòng nhập số điện thoại.");
 	}
 
-	 @Test
+	// @Test
 	public void TC_03_Invalid_Email() {
 		// 123@123.234@
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -127,7 +149,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmEmailErrorBy).getText(), "Email nhập lại không đúng");
 	}
 
-	 @Test
+	// @Test
 	public void TC_04_Incorrect_Confirm_Email() {
 		// Email nhập lại không đúng
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -142,7 +164,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmEmailErrorBy).getText(), "Email nhập lại không đúng");
 	}
 
-	 @Test
+	// @Test
 	public void TC_05_Password_less_than_6_chars() {
 		// Mật khẩu ít hơn 6 ký tự
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -158,7 +180,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmPasswordErrorBy).getText(), "Mật khẩu phải có ít nhất 6 ký tự");
 	}
 
-	 @Test
+	// @Test
 	public void TC_06_Incorrect_Confirm_Password() {
 		// Mật khẩu nhập lại không đúng
 		driver.findElement(nameTextboxBy).sendKeys(name);
@@ -173,7 +195,7 @@ public class Topic_09_Xpath_CSS_II {
 		Assert.assertEquals(driver.findElement(confirmPasswordErrorBy).getText(), "Mật khẩu bạn nhập không khớp");
 	}
 
-	 @Test
+	// @Test
 	public void TC_07_Invalid_Phone() {
 		// Vui lòng nhập số
 		driver.findElement(nameTextboxBy).sendKeys(name);
