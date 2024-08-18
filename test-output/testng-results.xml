@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-18T02:39:30 ICT" name="Default suite" finished-at="2024-08-18T02:39:40 ICT" duration-ms="9339">
+  <suite started-at="2024-08-18T11:33:45 ICT" name="Default suite" finished-at="2024-08-18T11:33:59 ICT" duration-ms="13761">
     <groups>
     </groups>
-    <test started-at="2024-08-18T02:39:30 ICT" name="Default test" finished-at="2024-08-18T02:39:40 ICT" duration-ms="9339">
+    <test started-at="2024-08-18T11:33:45 ICT" name="Default test" finished-at="2024-08-18T11:33:59 ICT" duration-ms="13761">
       <class name="Basic.Topic_09_Xpath_CSS_II">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:30 ICT" name="beforeClass" finished-at="2024-08-18T02:39:35 ICT" duration-ms="4406" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T11:33:45 ICT" name="beforeClass" finished-at="2024-08-18T11:33:49 ICT" duration-ms="3514" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:35 ICT" name="BeforeMethod" finished-at="2024-08-18T02:39:36 ICT" duration-ms="1764" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T11:33:49 ICT" name="BeforeMethod" finished-at="2024-08-18T11:33:52 ICT" duration-ms="2899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="contains_concat_()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:36 ICT" name="contains_concat_" finished-at="2024-08-18T02:39:38 ICT" duration-ms="1789" status="PASS">
+        <test-method signature="Lesson()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T11:33:52 ICT" name="Lesson" finished-at="2024-08-18T11:33:58 ICT" duration-ms="5963" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contains_concat_ -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T02:39:38 ICT" name="afterClass" finished-at="2024-08-18T02:39:40 ICT" duration-ms="1317" status="PASS">
+        </test-method> <!-- Lesson -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Basic.Topic_09_Xpath_CSS_II@79079097]" started-at="2024-08-18T11:33:58 ICT" name="afterClass" finished-at="2024-08-18T11:33:59 ICT" duration-ms="1307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

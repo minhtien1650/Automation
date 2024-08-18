@@ -5,9 +5,9 @@
     <classes>
       <class name="Basic.Topic_09_Xpath_CSS_II">
         <methods>
+          <include name="Lesson"/>
           <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="contains_concat_"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Basic.Topic_09_Xpath_CSS_II -->
