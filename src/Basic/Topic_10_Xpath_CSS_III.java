@@ -69,7 +69,7 @@ public class Topic_10_Xpath_CSS_III {
 		List<WebElement> ancestorXpath = driver.findElements(By.xpath("//ul[@class='benefits']/ancestor::*"));
 		System.out.println("Lấy tìm từ node cha trở lên của thẻ <ul class=\"benefits\">: " + ancestorXpath.size());
 		for (WebElement webElement : ancestorXpath) {
-			System.out.println(webElement.getAttribute().getA);
+			System.out.println(webElement.getTagName());
 		}
 
 		// 2 - CSS selector
