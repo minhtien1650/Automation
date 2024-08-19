@@ -1,4 +1,4 @@
-package Basic;
+package Xpath_CSS_Selector;
 
 import java.time.Duration;
 

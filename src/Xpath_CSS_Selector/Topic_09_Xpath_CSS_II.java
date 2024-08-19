@@ -1,4 +1,4 @@
-package Basic;
+package Xpath_CSS_Selector;
 
 import static org.testng.Assert.assertEquals;
 
