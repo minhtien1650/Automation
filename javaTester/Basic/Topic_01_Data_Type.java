@@ -1,6 +1,7 @@
 package Basic;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -65,6 +66,7 @@ public class Topic_01_Data_Type {
 		// n element
 		List<WebElement> buttons = driver.findElements(By.tagName("button"));
 		
+		Set<String> allWindows = driver.getWindowHandles();
 	}
 
 }
