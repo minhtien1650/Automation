@@ -5,7 +5,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Selenium"/>
+	<classpathentry kind="src" path="javaTester"/>
 	<classpathentry kind="lib" path="libraries/commons-codec-1.17.0.jar"/>
 	<classpathentry kind="lib" path="libraries/commons-compress-1.26.2.jar"/>
 	<classpathentry kind="lib" path="libraries/commons-io-2.16.1.jar"/>
