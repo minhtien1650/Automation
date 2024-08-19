@@ -1,6 +1,11 @@
 package Basic;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -51,7 +56,15 @@ public class Topic_01_Data_Type {
 		Actions action = new Actions(driver);
 		
 		// Interface
+		JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
+		
 		// Collection (Set/Queue/List)
+		// 1 element
+		WebElement emailTextBox = driver.findElement(By.id(""));
+		
+		// n element
+		List<WebElement> buttons = driver.findElements(By.tagName("button"));
+		
 	}
 
 }
