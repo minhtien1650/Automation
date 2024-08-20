@@ -153,7 +153,7 @@ public class Topic_12_Web_Browser_Command {
 
 		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
 
-		Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/customer/account/create/");
+		Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/create/");
 
 		driver.navigate().back();
 
