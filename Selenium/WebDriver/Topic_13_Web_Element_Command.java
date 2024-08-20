@@ -209,12 +209,46 @@ public class Topic_13_Web_Element_Command {
 		
 		WebElement emailTextBox = driver.findElement(By.id("email"));
 		WebElement userNameTextBox = driver.findElement(By.id("new_username"));
-		//WebElement passwordTextBox = driver.findElement(By.id("new_password"));
+		WebElement passwordTextBox = driver.findElement(By.id("new_password"));
+		
 		
 		emailTextBox.sendKeys("automationfc@gmail.com");
 		emailTextBox.sendKeys(Keys.TAB);
 		
 		Assert.assertEquals(userNameTextBox.getAttribute("value"), emailTextBox.getAttribute("value"));
+		
+		passwordTextBox.sendKeys("1a");
+		WebElement oneLowercaseCharacter = driver.findElement(By.xpath("//li[@class='lowercase-char completed']/span"));
+		System.out.println(rgbatoHex(oneLowercaseCharacter.getCssValue("color")));
+	}
+	
+	public static String rgbatoHex(String rgba) {
+		// Tách chuỗi rgba ra làm r,g,b  
+		// Ví dụ với: rgba(255, 99, 71, 1) 
+		// replace("rgba(", ""): thay thế "rgba(" bằng "" nếu có 
+		// -> Kết quả: 255, 99, 71, 1)
+		// replace("rgb(", ""): thay thế "rgb(" bằng "" nếu có 
+		// -> vì không có nên kết quả vẫn là: 255, 99, 71, 1)
+		// replace(")", ""): thay thế ")" bằng "" nếu có
+		// -> Kết quả: 255, 99, 71, 1
+		// split(","): Tách chuỗi dựa trên dấu "," thành các phần tử riêng lẻ trong mảng
+		// -> Kết quả: ["255", " 99", " 71", " 1"]
+		String[] parts = rgba.replace("rgba(", "").replace("rgb(", "").replace(")", "").split(",");
+		
+		// Lấy giá trị số của r, g, b
+		// parts[0]: Lấy phần tử đầu tiên
+		// trim(): Loại bỏ khoảng trắng đầu cuối
+		// Integer.parseInt(parts[0].trim()) chuyển đổi string thành int
+		int r = Integer.parseInt(parts[0].trim());
+		int g = Integer.parseInt(parts[1].trim());
+		int b = Integer.parseInt(parts[2].trim());
+		
+		// Chuyển đổi giá trị sang dạng hex
+		String hexR = String.format("%02x", r);
+		String hexG = String.format("%02x", g);
+		String hexB = String.format("%02x", b);
+		
+		return "#"+hexR+hexG+hexB;
 	}
 	
 	@AfterClass
