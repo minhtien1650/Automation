@@ -52,7 +52,21 @@ public class Topic_12_Web_Browser_Command {
 		String homePageURL = driver.getCurrentUrl();
 		
 		// Trả về HTML source của page hiện tại
-		driver.getPageSource();
+		String homePageSource = driver.getPageSource();
+
+		// Trả về page title của page hiện tại
+		String homePageTitle = drive.getTitle();
+
+		// Get/xóa cookie của page
+		// Build framework: Share state of Class
+		// Get cookie sau khi login xong -> Truyền vào các Class khác -> Reduce time login cho từng Class
+		driver.manage().deleteALlCookies();
+
+		// Build framework: Get ra log của browser
+		driver.manage().logs().getAvailableLogTypes();
+
+		//
+		driver.manage().timeouts().implicitlyWait(ofSecond(15));
 	}
 	
 	@Test
