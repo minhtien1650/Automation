@@ -22,8 +22,8 @@ public class Topic_12_Web_Browser_Command {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	}
 
-	@Test
-	public void TC_01_Browser() {
+	//@Test
+	public void Browser() {
 		// Mở ra 1 page URL
 		driver.get("https://www.messenger.com/");	//*
 		
@@ -115,8 +115,16 @@ public class Topic_12_Web_Browser_Command {
 	}
 	
 	@Test
-	public void TC_02_Element() {
-		
+	public void TC_01_Verify_Url() {
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+		String urlLoginPage = driver.manage().getCurrentUrl();
+		System.out().println("Login Page URL: " + urlLoginPage);
+
+		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
+		String urlRegisterPage = driver.manage().getCurrentUrl();
+		System.out().println("Register Page URL: " + urlRegisterPage);
 	}
 	
 	@AfterClass
