@@ -25,13 +25,13 @@ public class Topic_12_Web_Browser_Command {
 	@Test
 	public void TC_01_Browser() {
 		// Mở ra 1 page URL
-		driver.get("https://www.messager.com/");
+		driver.get("https://www.messenger.com/");	//*
 		
 		// Đóng 1 tab đang active
 		driver.close();
 		
 		// Đóng trình duyệt(ko care có bao nhiêu tab/window đang mở)
-		driver.quit();
+		driver.quit();	//*
 		
 		// Lấy ra ID hiện tại của window/tab đang active
 		String messagerID = driver.getWindowHandle();
@@ -40,16 +40,16 @@ public class Topic_12_Web_Browser_Command {
 		Set<String> allIDs = driver.getWindowHandles();
 		
 		// Switch/ Nhảy đến 1 tab/window nào đó
-		driver.switchTo().window(messagerID);
+		driver.switchTo().window(messagerID);	//*
 		
 		// Tìm ra 1 element với locator nào đó
-		WebElement emailTextBox = driver.findElement(By.id(""));
+		WebElement emailTextBox = driver.findElement(By.id(""));	//*
 		
 		// Tìm ra tất cả các element với locator nào đó
-		List<WebElement> textboxes = driver.findElements(By.id(""));
+		List<WebElement> textboxes = driver.findElements(By.id(""));	//*
 		
 		// Trả về URL của page hiện tại
-		String homePageURL = driver.getCurrentUrl();
+		String homePageURL = driver.getCurrentUrl();	//*
 		
 		// Trả về HTML source của page hiện tại
 		String homePageSource = driver.getPageSource();
@@ -65,8 +65,53 @@ public class Topic_12_Web_Browser_Command {
 		// Build framework: Get ra log của browser
 		driver.manage().logs().getAvailableLogTypes();
 
-		//
-		driver.manage().timeouts().implicitlyWait(ofSecond(15));
+		// Chờ cho việc tìm Element (findElement/findElements)
+		// 1000ms = 1s
+		// WabDriver Wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSecond(15));	//*
+		driver.manage().timeouts().implicitlyWait(Duration.ofMiliSecond(15000));
+
+		// Chờ cho 1 page được load thành công (Option)
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSecond(15));
+
+		// Chờ cho 1 script được execute thành công (Option)
+		// Javascript Executor
+		driver.manage().timeouts().setScriptTimeout(Duration.ofSecond(15));
+
+		// Mở browser full màn hình (chế độ F11)
+		driver.manage().window().fullscreen();
+
+		// Maximize màn hình
+		driver.manage().window().maximize();	//*
+
+		// Lấy ra vị trí hiện tại của browser
+		driver.manage().window().getPosition();
+
+		// Set vào cho browser tại vị trí nào đó
+		driver.manage().window().setPosition(new Point(0, 0));
+
+		// Lấy ra kích thước hiện tại của browser (rộng/cao)
+		Dimension browserSize = driver.manage().window().getSize();
+		driver.manage().window().setSize(new Dimension(768, 680));
+
+		// Back to page
+		driver.navigate().back();
+
+		// Forward to page
+		driver.navigate().forward();
+
+		// Tải lại trang
+		driver.navigate().refresh();
+
+		// Keep history
+		driver.navigate().to("https://www.messenger.com/");
+
+		// Windows/Tabs
+		// Alert
+		// Frame/Iframe
+		driver.switchTo().alert();	//*
+		driver.switchTo().window("");	//*
+		driver.swithcTo().frame("");	//*
 	}
 	
 	@Test
