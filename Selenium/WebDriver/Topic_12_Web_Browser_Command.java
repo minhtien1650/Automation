@@ -126,6 +126,51 @@ public class Topic_12_Web_Browser_Command {
 		String urlRegisterPage = driver.manage().getCurrentUrl();
 		System.out().println("Register Page URL: " + urlRegisterPage);
 	}
+
+	@Test
+	public void TC_02_Verify_Title(){
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+		String titleLoginPage = driver.getTitle();
+		Assert.assertEquals(titleLoginPage, "Customer Login");
+
+		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
+		String titleRegisterPage = driver.getTitle();
+		Assert.assertEquals(titleRegisterPage, "Create New Customer Account");
+	}
+
+	@Test
+	public void TC_03_Navigate_function(){
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+
+		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
+
+		Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/customer/account/create/");
+
+		driver.navigate().back();
+
+		Assert.assertEquals(driver.getCurrentUrl(), "http://live.techpanda.org/index.php/customer/account/login/");
+
+		driver.navigate().forward();
+
+		Assert.assertEquals(driver.getTitle(), "Create New Customer Account");
+	}
+
+	@Test
+	public void TC_04_Page_Source(){
+		driver.get("http://live.techpanda.org/");
+
+		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+		String loginPageSource = driver.getPageSource();
+		Assert.assertTrue(loginPageSource.contains("Login or Create an Account"));
+
+		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
+		String registerPageSource = driver.getPageSource();
+		Assert.assertTrue(loginPageSource.contains("Create an Account"));
+	}
 	
 	@AfterClass
 	public void AfterClass() {
