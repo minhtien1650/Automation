@@ -1,7 +1,5 @@
 package WebDriver;
 
-//import static org.testng.Assert.assertEquals;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
