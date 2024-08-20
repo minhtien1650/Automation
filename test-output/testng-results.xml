@@ -1,77 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-20T16:43:26 ICT" name="Default suite" finished-at="2024-08-20T16:43:48 ICT" duration-ms="21113">
+  <suite started-at="2024-08-20T16:56:42 ICT" name="Default suite" finished-at="2024-08-20T16:57:00 ICT" duration-ms="17128">
     <groups>
     </groups>
-    <test started-at="2024-08-20T16:43:26 ICT" name="Default test" finished-at="2024-08-20T16:43:48 ICT" duration-ms="21113">
+    <test started-at="2024-08-20T16:56:42 ICT" name="Default test" finished-at="2024-08-20T16:57:00 ICT" duration-ms="17128">
       <class name="WebDriver.Topic_12_Web_Browser_Command">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:27 ICT" name="BeforeClass" finished-at="2024-08-20T16:43:33 ICT" duration-ms="6937" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:42 ICT" name="BeforeClass" finished-at="2024-08-20T16:56:44 ICT" duration-ms="1970" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="TC_01_Verify_Url()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:33 ICT" name="TC_01_Verify_Url" finished-at="2024-08-20T16:43:39 ICT" duration-ms="5450" status="PASS">
+        <test-method signature="TC_01_Verify_Url()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:44 ICT" name="TC_01_Verify_Url" finished-at="2024-08-20T16:56:50 ICT" duration-ms="5458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Verify_Url -->
-        <test-method signature="TC_02_Verify_Title()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:39 ICT" name="TC_02_Verify_Title" finished-at="2024-08-20T16:43:42 ICT" duration-ms="2736" status="PASS">
+        <test-method signature="TC_02_Verify_Title()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:50 ICT" name="TC_02_Verify_Title" finished-at="2024-08-20T16:56:53 ICT" duration-ms="2653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_Verify_Title -->
-        <test-method signature="TC_03_Navigate_function()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:42 ICT" name="TC_03_Navigate_function" finished-at="2024-08-20T16:43:45 ICT" duration-ms="2867" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [http://live.techpanda.org/customer/account/create/] but found [http://live.techpanda.org/index.php/customer/account/create/]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [http://live.techpanda.org/customer/account/create/] but found [http://live.techpanda.org/index.php/customer/account/create/]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at WebDriver.Topic_12_Web_Browser_Command.TC_03_Navigate_function(Topic_12_Web_Browser_Command.java:156)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="TC_03_Navigate_function()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:53 ICT" name="TC_03_Navigate_function" finished-at="2024-08-20T16:56:57 ICT" duration-ms="4211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_03_Navigate_function -->
-        <test-method signature="TC_04_Page_Source()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:45 ICT" name="TC_04_Page_Source" finished-at="2024-08-20T16:43:47 ICT" duration-ms="2775" status="PASS">
+        <test-method signature="TC_04_Page_Source()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:57 ICT" name="TC_04_Page_Source" finished-at="2024-08-20T16:56:59 ICT" duration-ms="2508" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_04_Page_Source -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:43:47 ICT" name="AfterClass" finished-at="2024-08-20T16:43:48 ICT" duration-ms="252" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_12_Web_Browser_Command@35d019a3]" started-at="2024-08-20T16:56:59 ICT" name="AfterClass" finished-at="2024-08-20T16:57:00 ICT" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->

@@ -5,6 +5,7 @@ package WebDriver;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -81,7 +82,7 @@ public class Topic_12_Web_Browser_Command {
 
 		// Chờ cho 1 script được execute thành công (Option)
 		// Javascript Executor
-		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(15));
+		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(15));
 
 		// Mở browser full màn hình (chế độ F11)
 		driver.manage().window().fullscreen();
