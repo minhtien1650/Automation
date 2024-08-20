@@ -5,7 +5,6 @@ package WebDriver;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -29,7 +28,7 @@ public class Topic_12_Web_Browser_Command {
 	}
 
 	//@Test
-	public void Browser() {
+	public void BrowserCommand() {
 		// Mở ra 1 page URL
 		driver.get("https://www.messenger.com/");	//*
 		
