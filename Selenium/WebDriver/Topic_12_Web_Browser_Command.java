@@ -1,6 +1,6 @@
 package WebDriver;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
@@ -60,12 +60,12 @@ public class Topic_12_Web_Browser_Command {
 		String homePageSource = driver.getPageSource();
 
 		// Trả về page title của page hiện tại
-		String homePageTitle = drive.getTitle();
+		String homePageTitle = driver.getTitle();
 
 		// Get/xóa cookie của page
 		// Build framework: Share state of Class
 		// Get cookie sau khi login xong -> Truyền vào các Class khác -> Reduce time login cho từng Class
-		driver.manage().deleteALlCookies();
+		driver.manage().deleteAllCookies();
 
 		// Build framework: Get ra log của browser
 		driver.manage().logs().getAvailableLogTypes();
@@ -73,15 +73,15 @@ public class Topic_12_Web_Browser_Command {
 		// Chờ cho việc tìm Element (findElement/findElements)
 		// 1000ms = 1s
 		// WabDriver Wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSecond(15));	//*
-		driver.manage().timeouts().implicitlyWait(Duration.ofMiliSecond(15000));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));	//*
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(15000));
 
 		// Chờ cho 1 page được load thành công (Option)
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSecond(15));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 
 		// Chờ cho 1 script được execute thành công (Option)
 		// Javascript Executor
-		driver.manage().timeouts().setScriptTimeout(Duration.ofSecond(15));
+		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(15));
 
 		// Mở browser full màn hình (chế độ F11)
 		driver.manage().window().fullscreen();
@@ -116,7 +116,7 @@ public class Topic_12_Web_Browser_Command {
 		// Frame/Iframe
 		driver.switchTo().alert();	//*
 		driver.switchTo().window("");	//*
-		driver.swithcTo().frame("");	//*
+		driver.switchTo().frame("");	//*
 	}
 	
 	@Test
@@ -124,12 +124,12 @@ public class Topic_12_Web_Browser_Command {
 		driver.get("http://live.techpanda.org/");
 
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
-		String urlLoginPage = driver.manage().getCurrentUrl();
-		System.out().println("Login Page URL: " + urlLoginPage);
+		String urlLoginPage = driver.getCurrentUrl();
+		System.out.println("Login Page URL: " + urlLoginPage);
 
 		driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
-		String urlRegisterPage = driver.manage().getCurrentUrl();
-		System.out().println("Register Page URL: " + urlRegisterPage);
+		String urlRegisterPage = driver.getCurrentUrl();
+		System.out.println("Register Page URL: " + urlRegisterPage);
 	}
 
 	@Test
