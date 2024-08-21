@@ -217,13 +217,14 @@ public class Topic_13_Web_Element_Command {
 		
 		Assert.assertEquals(userNameTextBox.getAttribute("value"), emailTextBox.getAttribute("value"));
 		
-		passwordTextBox.sendKeys("1a");
 		WebElement lowercaseCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[1]"));
 		WebElement uppercaseCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[2]"));
 		WebElement numberCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[3]"));
 		WebElement specialCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[4]"));
 		WebElement eightCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[5]"));
 		WebElement usernameCheck = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[6]"));
+
+		passwordTextBox.sendKeys("");
 	}
 	
 	public static String rgbatoHex(String rgba) {
