@@ -50,7 +50,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 		driver.findElement(By.xpath("//input[@onkeyup='validatecustomername();']")).sendKeys("Selenium Online");
 		driver.findElement(By.xpath("//input[@value='m']")).click();
 		driver.findElement(By.xpath("//input[@onkeyup='validatedob();']")).sendKeys("10012000");
-		driver.findElement(By.xpath("//input[@onkeyup='validateAddress();']")).sendKeys("123 Address");
+		driver.findElement(By.xpath("//textarea[@onkeyup='validateAddress();']")).sendKeys("123 Address");
 		driver.findElement(By.xpath("//input[@onkeyup='validateCity();']")).sendKeys("Ho Chi Minh");
 		driver.findElement(By.xpath("//input[@onkeyup='validateState();']")).sendKeys("Thu Duc");
 		driver.findElement(By.xpath("//input[@onkeyup='validatePIN();']")).sendKeys("123456");
