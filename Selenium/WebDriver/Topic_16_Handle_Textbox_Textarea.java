@@ -20,7 +20,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 	public void BeforeClass() {
 		driver = new EdgeDriver();
 
-		email = "auto" + getRandomNumber + "@gmail.us"
+		email = "auto" + getRandomNumber() + "@gmail.us";
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
@@ -40,6 +40,8 @@ public class Topic_16_Handle_Textbox_Textarea {
 
 		driver.findElement(By.name("uid")).sendKeys(userID);
 		driver.findElement(By.name("password")).sendKeys(password);
+
+		driver.findElement(By.xpath("//input[@value='LOGIN']")).click();
 
 		Assert.assertTrue(driver.findElement(By.xpath("//marquee[@class='heading3']")).getText().contains("Welcome To Manager's Page of Guru99 Bank"));
 
