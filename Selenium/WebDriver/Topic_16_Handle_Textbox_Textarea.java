@@ -57,7 +57,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 		driver.findElement(By.xpath("//input[@onkeyup='validateTelephone();']")).sendKeys("0123456789");
 		driver.findElement(By.xpath("//input[@onkeyup='validateEmail();']")).sendKeys(email);
 		driver.findElement(By.xpath("//input[@onkeyup='validatepassword();']")).sendKeys(password);
-		driver.findElement(By.xpath("input[value='Submit']")).click();
+		driver.findElement(By.cssSelector("input[value='Submit']")).click();
 
 		System.out.println(driver.findElement(By.xpath("//td[contains(text(),'Customer ID')]//following-sibling::td")).getText());
 		
