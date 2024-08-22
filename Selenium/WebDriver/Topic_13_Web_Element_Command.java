@@ -11,6 +11,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -207,6 +209,10 @@ public class Topic_13_Web_Element_Command {
 	public void TC_04_Register_function_at_Mailchimp() {
 		driver.get("https://login.mailchimp.com/signup/");
 		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		
+		WebElement lowercaseCharacter, uppercaseCharacter, numberCharacter, specialCharacter, eightCharacter, usernameCheck;
+		
 		WebElement emailTextBox = driver.findElement(By.id("email"));
 		WebElement userNameTextBox = driver.findElement(By.id("new_username"));
 		WebElement passwordTextBox = driver.findElement(By.id("new_password"));
@@ -217,14 +223,150 @@ public class Topic_13_Web_Element_Command {
 		
 		Assert.assertEquals(userNameTextBox.getAttribute("value"), emailTextBox.getAttribute("value"));
 		
-		WebElement lowercaseCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[1]"));
-		WebElement uppercaseCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[2]"));
-		WebElement numberCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[3]"));
-		WebElement specialCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[4]"));
-		WebElement eightCharacter = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[5]"));
-		WebElement usernameCheck = driver.findElement(By.xpath("//ul[@aria-label='Password helper text']/li[6]"));
-
-		passwordTextBox.sendKeys("");
+		// Lower case character
+//		passwordTextBox.sendKeys("auto");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//	//	wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+////		System.out.println(rgbatoHex(driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]")).getCssValue("color")));
+//		Assert.assertEquals(rgbatoHex(lowercaseCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(uppercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(numberCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(specialCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(eightCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(usernameCheck.getCssValue("color")), "#a73205");
+//		
+//		// Upper case character
+//		passwordTextBox.clear();
+//		passwordTextBox.sendKeys("AUTO");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//		//wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+//		
+//		Assert.assertEquals(rgbatoHex(lowercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(uppercaseCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(numberCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(specialCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(eightCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(usernameCheck.getCssValue("color")), "#a73205");
+//		
+//		// One number
+//		passwordTextBox.clear();
+//		passwordTextBox.sendKeys("123456");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//		wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+//		
+//		Assert.assertEquals(rgbatoHex(lowercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(uppercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(numberCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(specialCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(eightCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(usernameCheck.getCssValue("color")), "#008547");
+//		
+//		// One special character
+//		passwordTextBox.clear();
+//		passwordTextBox.sendKeys("@@@###");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//		wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+//		
+//		Assert.assertEquals(rgbatoHex(lowercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(uppercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(numberCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(specialCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(eightCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(usernameCheck.getCssValue("color")), "#008547");
+//		
+//		// 8 characters minimum
+//		passwordTextBox.clear();
+//		passwordTextBox.sendKeys("12345678");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//		wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+//		
+//		Assert.assertEquals(rgbatoHex(lowercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(uppercaseCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(numberCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(specialCharacter.getCssValue("color")), "#a73205");
+//		Assert.assertEquals(rgbatoHex(eightCharacter.getCssValue("color")), "#008547");
+//		Assert.assertEquals(rgbatoHex(usernameCheck.getCssValue("color")), "#008547");
+//		
+//		// All is valid
+//		passwordTextBox.clear();
+//		passwordTextBox.sendKeys("Abc@1234");
+//		
+//		lowercaseCharacter = driver.findElement(By.xpath("//*[contains(text(),'One lowercase character')]"));
+//		uppercaseCharacter = driver.findElement(By.xpath("//li[contains(@class,'uppercase-char')]"));
+//		numberCharacter = driver.findElement(By.xpath("//li[contains(@class,'number-char')]"));
+//		specialCharacter = driver.findElement(By.xpath("//li[contains(@class,'special-char')]"));
+//		eightCharacter = driver.findElement(By.xpath("//li[contains(@class,'8-char')]"));
+//		usernameCheck = driver.findElement(By.xpath("//li[contains(@class,'username-check')]"));
+//		
+//		wait.until(ExpectedConditions.attributeContains(By.xpath("//li[contains(@class,'lowercase-char')]"), "class", "complete"));
+//		
+//		Assert.assertFalse(lowercaseCharacter.isDisplayed());
+//		Assert.assertFalse(uppercaseCharacter.isDisplayed());
+//		Assert.assertFalse(numberCharacter.isDisplayed());
+//		Assert.assertFalse(specialCharacter.isDisplayed());
+//		Assert.assertFalse(eightCharacter.isDisplayed());
+//		Assert.assertFalse(usernameCheck.isDisplayed());
+		
+		String[] password = {"auto", "AUTO", "Abc@1234", "123456","abC#6789" , "@@@###", "12345678", "aBc!3456"};
+		
+		By lowercaseCharacterBy = By.xpath("//*[contains(text(),'One lowercase character')]");
+		By uppercaseCharacterBy = By.xpath("//li[contains(@class,'uppercase-char')]");
+		By numberCharacterBy = By.xpath("//li[contains(@class,'number-char')]");
+		By specialCharacterBy = By.xpath("//li[contains(@class,'special-char')]");
+		By eightCharacterBy = By.xpath("//li[contains(@class,'8-char')]");
+		By usernameCheckBy = By.xpath("//li[contains(@class,'username-check')]");
+		
+		for (int i = 0; i < password.length; i++) {
+			String passwordKey = password[i];
+			passwordTextBox.clear();
+			passwordTextBox.sendKeys(passwordKey);
+			if (driver.findElement(lowercaseCharacterBy).isDisplayed()) {
+				System.out.println(passwordKey);
+				System.out.println(rgbatoHex(driver.findElement(lowercaseCharacterBy).getCssValue("color")));
+				System.out.println(rgbatoHex(driver.findElement(uppercaseCharacterBy).getCssValue("color")));
+				System.out.println(rgbatoHex(driver.findElement(numberCharacterBy).getCssValue("color")));
+				System.out.println(rgbatoHex(driver.findElement(specialCharacterBy).getCssValue("color")));
+				System.out.println(rgbatoHex(driver.findElement(eightCharacterBy).getCssValue("color")));
+				System.out.println(rgbatoHex(driver.findElement(usernameCheckBy).getCssValue("color")));
+			} else {
+				System.out.println(passwordKey + " is all valid");
+			}
+		}
 	}
 	
 	public static String rgbatoHex(String rgba) {
