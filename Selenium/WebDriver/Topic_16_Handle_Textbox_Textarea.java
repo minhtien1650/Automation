@@ -20,7 +20,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 	public void BeforeClass() {
 		driver = new EdgeDriver();
 
-		email = "auto" + getRandomNumber + "@gmail.us"
+		email = "auto" + getRandomNumber() + "@gmail.us";
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
