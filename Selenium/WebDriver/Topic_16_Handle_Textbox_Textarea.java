@@ -41,6 +41,8 @@ public class Topic_16_Handle_Textbox_Textarea {
 		driver.findElement(By.name("uid")).sendKeys(userID);
 		driver.findElement(By.name("password")).sendKeys(password);
 
+		driver.findElement(By.xpath("//input[@value='LOGIN']")).click();
+
 		Assert.assertTrue(driver.findElement(By.xpath("//marquee[@class='heading3']")).getText().contains("Welcome To Manager's Page of Guru99 Bank"));
 
 		driver.findElement(By.xpath("//a[contains(.,'New Customer')]")).click();
