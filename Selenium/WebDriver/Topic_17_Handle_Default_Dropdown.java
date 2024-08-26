@@ -27,7 +27,7 @@ public class Topic_17_Handle_Default_Dropdown {
 		driver.manage().window().maximize();
 	}
 
-	//@Test
+	@Test
 	public void TC_01_NopCommerce() {
 		driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 		
@@ -74,6 +74,19 @@ public class Topic_17_Handle_Default_Dropdown {
 		driver.findElement(By.id("Password")).sendKeys(password);
 		driver.findElement(By.id("ConfirmPassword")).sendKeys(password);
 		driver.findElement(By.id("register-button")).click();
+		
+		Assert.assertTrue(driver.findElement(By.xpath("//div[text()='Your registration completed']")).isDisplayed());
+		
+		driver.findElement(By.xpath("//a[@class='ico-account']")).click();
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthDay")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(), day);
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthMonth")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(), month);
+		
+		select = new Select(driver.findElement(By.name("DateOfBirthYear")));
+		Assert.assertEquals(select.getFirstSelectedOption().getText(), year);
 	}
 
 	@Test
