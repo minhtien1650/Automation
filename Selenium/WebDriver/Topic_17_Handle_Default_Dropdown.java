@@ -25,7 +25,7 @@ public class Topic_17_Handle_Default_Dropdown {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+	//@Test
 	public void TC_01_NopCommerce() {
 		driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 		
@@ -72,6 +72,27 @@ public class Topic_17_Handle_Default_Dropdown {
 		driver.findElement(By.id("Password")).sendKeys(password);
 		driver.findElement(By.id("ConfirmPassword")).sendKeys(password);
 		driver.findElement(By.id("register-button")).click();
+	}
+
+	@Test
+	public void TC_02_Rode(){
+		driver.get("https://www.rode.com/wheretobuy");
+
+		select = new Select(driver.findElement(By.id("country")));
+		Assert.assertFalse(select.isMultiple());
+
+		select.selectByVisisbleText("Vietnam");
+		driver.findElement(By.id("map_search_query")).sendKeys("HO CHI MINH");
+
+		driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
+
+		List<WebElement> dealers = diver.findElements(By.xpath("//h3[contains(text(),'Dealers')]/following-sibling::div//h4"));
+
+		Assert.assertEquals(dealers.size(), 16);
+
+		for(WebElement dealerName : dealers){
+			System.out.println(dealerName.getText());
+		}
 	}
 	
 	public int getRandomNumber() {
