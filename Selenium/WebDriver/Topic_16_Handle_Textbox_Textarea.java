@@ -88,7 +88,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 
 		String gender = driver.findElement(By.xpath("//input[@value='m']/parent::td")).getText().trim();
 
-		String[] parts = gender.Split(" ");
+		String[] parts = gender.split(" ");
 
 		driver.findElement(By.cssSelector("input[value='Submit']")).click();
 

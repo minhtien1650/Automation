@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-26T12:57:43 ICT" name="Default suite" finished-at="2024-08-26T12:57:58 ICT" duration-ms="15396">
+  <suite started-at="2024-08-26T13:48:03 ICT" name="Default suite" finished-at="2024-08-26T13:48:34 ICT" duration-ms="30645">
     <groups>
     </groups>
-    <test started-at="2024-08-26T12:57:43 ICT" name="Default test" finished-at="2024-08-26T12:57:58 ICT" duration-ms="15396">
-      <class name="WebDriver.Topic_17_Handle_Default_Dropdown">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_17_Handle_Default_Dropdown@2a3b5b47]" started-at="2024-08-26T12:57:43 ICT" name="BeforeClass" finished-at="2024-08-26T12:57:48 ICT" duration-ms="4917" status="PASS">
+    <test started-at="2024-08-26T13:48:03 ICT" name="Default test" finished-at="2024-08-26T13:48:34 ICT" duration-ms="30645">
+      <class name="WebDriver.Topic_16_Handle_Textbox_Textarea">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_16_Handle_Textbox_Textarea@2a3b5b47]" started-at="2024-08-26T13:48:03 ICT" name="BeforeClass" finished-at="2024-08-26T13:48:07 ICT" duration-ms="3980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="TC_02_Rode()[pri:0, instance:WebDriver.Topic_17_Handle_Default_Dropdown@2a3b5b47]" started-at="2024-08-26T12:57:48 ICT" name="TC_02_Rode" finished-at="2024-08-26T12:57:58 ICT" duration-ms="10012" status="PASS">
+        <test-method signature="TC_01()[pri:0, instance:WebDriver.Topic_16_Handle_Textbox_Textarea@2a3b5b47]" started-at="2024-08-26T13:48:07 ICT" name="TC_01" finished-at="2024-08-26T13:48:32 ICT" duration-ms="25119" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_Rode -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_17_Handle_Default_Dropdown@2a3b5b47]" started-at="2024-08-26T12:57:58 ICT" name="AfterClass" finished-at="2024-08-26T12:57:58 ICT" duration-ms="374" status="PASS">
+        </test-method> <!-- TC_01 -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_16_Handle_Textbox_Textarea@2a3b5b47]" started-at="2024-08-26T13:48:32 ICT" name="AfterClass" finished-at="2024-08-26T13:48:34 ICT" duration-ms="1478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-      </class> <!-- WebDriver.Topic_17_Handle_Default_Dropdown -->
+      </class> <!-- WebDriver.Topic_16_Handle_Textbox_Textarea -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
