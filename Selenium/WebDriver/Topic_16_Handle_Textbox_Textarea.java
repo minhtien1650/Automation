@@ -82,9 +82,13 @@ public class Topic_16_Handle_Textbox_Textarea {
 
 //		String mailText = driver.findElement(By.xpath("//input[@value='m']/following-sibling::text()[1]")).getText().trim();
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String mailText = (String) js.executeScript(
-				"return document.evaluate(\"//input[@value='m']/following-sibling::text()[1]\", document, null, XPathResult.STRING_TYPE, null).stringValue;");
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//String mailText = (String) js.executeScript(
+		//		"return document.evaluate(\"//input[@value='m']/following-sibling::text()[1]\", document, null, XPathResult.STRING_TYPE, null).stringValue;");
+
+		String gender = driver.findElement(By.xpath("//input[@value='m']/parent::td")).getText().trim();
+
+		String[] parts = gender.Split("\n");
 
 		driver.findElement(By.cssSelector("input[value='Submit']")).click();
 
@@ -96,8 +100,10 @@ public class Topic_16_Handle_Textbox_Textarea {
 		Assert.assertEquals(
 				driver.findElement(By.xpath("//td[contains(.,'Customer Name')]/following-sibling::td")).getText(),
 				name);
+		//Assert.assertEquals(driver.findElement(By.xpath("//td[contains(.,'Gender')]/following-sibling::td")).getText(),
+		//		mailText.trim());
 		Assert.assertEquals(driver.findElement(By.xpath("//td[contains(.,'Gender')]/following-sibling::td")).getText(),
-				mailText.trim());
+				parts[1]);
 		Assert.assertEquals(
 				convertDate(
 						driver.findElement(By.xpath("//td[contains(.,'Birthdate')]/following-sibling::td")).getText()),
