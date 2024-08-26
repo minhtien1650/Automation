@@ -82,7 +82,7 @@ public class Topic_17_Handle_Default_Dropdown {
 		select = new Select(driver.findElement(By.id("country")));
 		Assert.assertFalse(select.isMultiple());
 
-		select.selectByVisisbleText("Vietnam");
+		select.selectByVisibleText("Vietnam");
 		driver.findElement(By.id("map_search_query")).sendKeys("HO CHI MINH");
 
 		driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
