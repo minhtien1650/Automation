@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -87,7 +88,7 @@ public class Topic_17_Handle_Default_Dropdown {
 
 		driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
 
-		List<WebElement> dealers = diver.findElements(By.xpath("//h3[contains(text(),'Dealers')]/following-sibling::div//h4"));
+		List<WebElement> dealers = driver.findElements(By.xpath("//h3[contains(text(),'Dealers')]/following-sibling::div//h4"));
 
 		Assert.assertEquals(dealers.size(), 16);
 
