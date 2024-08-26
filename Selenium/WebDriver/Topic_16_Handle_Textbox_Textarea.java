@@ -103,7 +103,7 @@ public class Topic_16_Handle_Textbox_Textarea {
 		//Assert.assertEquals(driver.findElement(By.xpath("//td[contains(.,'Gender')]/following-sibling::td")).getText(),
 		//		mailText.trim());
 		Assert.assertEquals(driver.findElement(By.xpath("//td[contains(.,'Gender')]/following-sibling::td")).getText(),
-				parts[1]);
+				parts[0]);
 		Assert.assertEquals(
 				convertDate(
 						driver.findElement(By.xpath("//td[contains(.,'Birthdate')]/following-sibling::td")).getText()),
