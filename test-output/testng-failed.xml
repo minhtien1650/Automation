@@ -7,7 +7,7 @@
         <methods>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
-          <include name="TC_01_JQuery"/>
+          <include name="TC_04_KendoUI"/>
         </methods>
       </class> <!-- WebDriver.Topic_18_Handle_Custom_Dropbox_I -->
     </classes>

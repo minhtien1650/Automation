@@ -27,7 +27,7 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 
 		// explicitWait: Wait để apply cho các trạng thái của element (visible/
 		// invisible/ presence/ clickable/ ...)
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 		// Ép kiểu tường minh (Reference casting)
 		jsExecutor = (JavascriptExecutor) driver;
@@ -37,7 +37,7 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+	//@Test
 	public void TC_01_JQuery() {
 		driver.get("http://jqueryui.com/resources/demos/selectmenu/default.html");
 
@@ -45,33 +45,91 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		By child = By.cssSelector("#number-menu div");
 
 		selectItemInDropdown(parent, child, "5");
-		sleepInSecond(3);
 		Assert.assertTrue(isElementDisplay(
 				By.xpath("//span[@id='number-button']//span[@class='ui-selectmenu-text' and text()='5']")));
 
 		selectItemInDropdown(parent, child, "19");
-		sleepInSecond(3);
 		Assert.assertTrue(isElementDisplay(
 				By.xpath("//span[@id='number-button']//span[@class='ui-selectmenu-text' and text()='19']")));
 
 		selectItemInDropdown(parent, child, "10");
-		sleepInSecond(3);
 		Assert.assertTrue(isElementDisplay(
 				By.xpath("//span[@id='number-button']//span[@class='ui-selectmenu-text' and text()='10']")));
 
 		selectItemInDropdown(parent, child, "15");
-		sleepInSecond(3);
 		Assert.assertTrue(isElementDisplay(
 				By.xpath("//span[@id='number-button']//span[@class='ui-selectmenu-text' and text()='15']")));
 
 	}
 
-	@Test
+	//@Test
 	public void TC_02_ReactJS() {
+		driver.get("https://react.semantic-ui.com/maximize/dropdown-example-selection/");
+
+		By parent = By.xpath("//div[@role='listbox']");
+		By child = By.cssSelector("div[role='option']>span");
+
+		selectItemInDropdown(parent, child, "Elliot Fu");
+		isElementDisplay(By.xpath("//div[@role='alert' and text()='Elliot Fu']"));
+
+		selectItemInDropdown(parent, child, "Stevie Feliciano");
+		isElementDisplay(By.xpath("//div[@role='alert' and text()='Stevie Feliciano']"));
+
+		selectItemInDropdown(parent, child, "Matt");
+		isElementDisplay(By.xpath("//div[@role='alert' and text()='Matt']"));
+	}
+
+	//@Test
+	public void TC_03_VueJS() {
+		driver.get("https://mikerodham.github.io/vue-dropdowns/");
+
+		By parent = By.cssSelector("li.dropdown-toggle");
+		By child = By.xpath("//li[@class='dropdown-toggle']/following-sibling::ul//a");
+
+		selectItemInDropdown(parent, child, "First Option");
+		isElementDisplay(By.xpath("//li[@class='dropdown-toggle' and contains(.,'First Option')]"));
+
+		selectItemInDropdown(parent, child, "Second Option");
+		isElementDisplay(By.xpath("//li[@class='dropdown-toggle' and contains(.,'Second Option')]"));
+
+		selectItemInDropdown(parent, child, "Third Option");
+		isElementDisplay(By.xpath("//li[@class='dropdown-toggle' and contains(.,'Third Option')]"));
 	}
 
 	@Test
-	public void TC_03_VueJS() {
+	public void TC_04_KendoUI() {
+		driver.get("https://demos.telerik.com/kendo-ui/dropdownlist/cascadingdropdownlist");
+
+		// Chờ cho đến khi cái icon loading biến mất trong vòng 15 giây
+		Assert.assertTrue(
+				explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("span.kd-loader"))));
+
+		// Chờ cho đến khi cái icon loading trong đropdown biến mất trong vòng 15 giây
+		Assert.assertTrue(explicitWait
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.className("k-input-loading-icon"))));
+
+		By categoryParent = By.xpath("//span[@aria-controls='categories_listbox']/span[@class='k-input-inner']");
+		By categoryChild = By.xpath("//ul[@id='categories_listbox']//span[@class='k-list-item-text']");
+
+		selectItemInDropdown(categoryParent, categoryChild, "Confections");
+
+		// Product Dropdown
+		Assert.assertTrue(explicitWait
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.className("k-input-loading-icon"))));
+
+		By productParent = By.xpath("//span[@aria-controls='products_listbox']/span[@class='k-input-inner']");
+		By productChild = By.cssSelector("ul#products_listbox>li>span");
+
+		selectItemInDropdown(productParent, productChild, "Maxilaku");
+
+		// Orders Dropdown
+		Assert.assertTrue(explicitWait
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.className("k-input-loading-icon"))));
+
+		By ordersParent = By.xpath("//span[@aria-controls='orders_listbox']/span[@class='k-input-inner']");
+		By ordersChild = By.cssSelector("ul#orders_listbox>li>span");
+
+		selectItemInDropdown(ordersParent, ordersChild, "Boise");
 	}
 
 	public void sleepInSecond(long timeoutInSecond) {
@@ -83,6 +141,9 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 	}
 
 	public void selectItemInDropdown(By parentBy, By childBy, String expectedText) {
+		// Chờ cho đến khi được phép click
+		explicitWait.until(ExpectedConditions.elementToBeClickable(parentBy));
+
 		// 1 - Click vào 1 element cho xổ ra tất cả item
 		driver.findElement(parentBy).click();
 
@@ -94,7 +155,7 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		List<WebElement> allItems = driver.findElements(childBy);
 
 		for (WebElement item : allItems) {
-			if (item.getText().equals(expectedText)) {
+			if (item.getText().trim().equals(expectedText)) {
 				if (item.isDisplayed()) { // 3 - Nếu item mình chọn nằm trong view (nhìn thấy được) thì click vào
 					item.click();
 				} else { // 4 - Nếu item mình chọn không nhìn thấy (che bên dưới) thì scroll xuống và
