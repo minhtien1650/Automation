@@ -140,15 +140,13 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 	public void TC_06_Editable(){
 		driver.get("https://indrimuska.github.io/jquery-editable-select/");
 
-		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Citroen");
+		selectItemInEditableDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Citroen");
 		sleepInSecond(2);
 
-		driver.findElement(By.cssSelector("#default-place>input")).clear();
-		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Jaguar");
+		selectItemInEditableDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Jaguar");
 		sleepInSecond(2);
 
-		driver.findElement(By.cssSelector("#default-place>input")).clear();
-		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Nissan");
+		selectItemInEditableDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Nissan");
 		sleepInSecond(2);
 	}
 	
@@ -180,8 +178,32 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 					item.click();
 				}
 			}
+			break;
 		}
 	}
+
+	public void selectItemInEditableDropdown(By parentBy, By childBy, String expectedText) {
+		driver.findElement(parentBy).clear();
+		driver.findElement(parentBy).sendKeys(expectedText);
+
+		// 2 - Wait cho tất cả element được load ra (có trong HTML/DOM)
+		// presence
+		// Store lại tất cả Element (item của Dropdown)
+		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(childBy));
+
+		for (WebElement item : allItems) {
+			if (item.getText().trim().equals(expectedText)) {
+				if (item.isDisplayed()) { // 3 - Nếu item mình chọn nằm trong view (nhìn thấy được) thì click vào
+					item.click();
+				} else { // 4 - Nếu item mình chọn không nhìn thấy (che bên dưới) thì scroll xuống và
+							// click vào
+					jsExecutor.executeScript("selectedNumber.scrollIntoView(true);", item);
+					item.click();
+				}
+			}
+			break;
+		}
+	}	
 
 	public boolean isElementDisplay(By by) {
 		WebElement element = driver.findElement(by);
