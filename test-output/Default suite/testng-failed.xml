@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriver.Topic_18_Handle_Custom_Dropbox_I">
+      <class name="WebDriver.Topic_20_Handle_Button_Radio_CheckBox">
         <methods>
+          <include name="TC_02_Button"/>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
-          <include name="TC_04_KendoUI"/>
         </methods>
-      </class> <!-- WebDriver.Topic_18_Handle_Custom_Dropbox_I -->
+      </class> <!-- WebDriver.Topic_20_Handle_Button_Radio_CheckBox -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

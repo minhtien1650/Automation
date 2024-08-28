@@ -192,6 +192,7 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(childBy));
 
 		for (WebElement item : allItems) {
+			System.out.println(item.getText());
 			if (item.getText().trim().equals(expectedText)) {
 				if (item.isDisplayed()) { // 3 - Nếu item mình chọn nằm trong view (nhìn thấy được) thì click vào
 					item.click();
