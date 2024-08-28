@@ -142,10 +142,12 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 
 		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Citroen");
 		sleepInSecond(2);
-		
+
+		driver.findElement(By.cssSelector("#default-place>input")).clear();
 		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Jaguar");
 		sleepInSecond(2);
-		
+
+		driver.findElement(By.cssSelector("#default-place>input")).clear();
 		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Nissan");
 		sleepInSecond(2);
 	}
