@@ -96,7 +96,6 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		isElementDisplay(By.xpath("//li[@class='dropdown-toggle' and contains(.,'Third Option')]"));
 	}
 
-	@Test
 	public void TC_04_KendoUI() {
 		driver.get("https://demos.telerik.com/kendo-ui/dropdownlist/cascadingdropdownlist");
 
@@ -132,6 +131,25 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 		selectItemInDropdown(ordersParent, ordersChild, "Boise");
 	}
 
+	@Test
+	public void TC_05_Angular(){
+		
+	}
+
+	@Test
+	public void TC_06_Editable(){
+		driver.get("https://indrimuska.github.io/jquery-editable-select/");
+
+		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Citroen");
+		sleepInSecond(2);
+		
+		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Jaguar");
+		sleepInSecond(2);
+		
+		selectItemInDropdown(By.cssSelector("#default-place>input"), By.cssSelector("#default-place li"), "Nissan");
+		sleepInSecond(2);
+	}
+	
 	public void sleepInSecond(long timeoutInSecond) {
 		try {
 			Thread.sleep(timeoutInSecond * 1000);
@@ -142,17 +160,13 @@ public class Topic_18_Handle_Custom_Dropbox_I {
 
 	public void selectItemInDropdown(By parentBy, By childBy, String expectedText) {
 		// Chờ cho đến khi được phép click
-		explicitWait.until(ExpectedConditions.elementToBeClickable(parentBy));
-
 		// 1 - Click vào 1 element cho xổ ra tất cả item
-		driver.findElement(parentBy).click();
+		explicitWait.until(ExpectedConditions.elementToBeClickable(parentBy)).click();
 
 		// 2 - Wait cho tất cả element được load ra (có trong HTML/DOM)
 		// presence
-		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(childBy));
-
 		// Store lại tất cả Element (item của Dropdown)
-		List<WebElement> allItems = driver.findElements(childBy);
+		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(childBy));
 
 		for (WebElement item : allItems) {
 			if (item.getText().trim().equals(expectedText)) {
