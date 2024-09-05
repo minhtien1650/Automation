@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-29T20:55:48 ICT" name="Default suite" finished-at="2024-08-29T20:55:58 ICT" duration-ms="10210">
+  <suite started-at="2024-09-08T21:24:17 ICT" name="Default suite" finished-at="2024-09-08T21:24:34 ICT" duration-ms="16712">
     <groups>
     </groups>
-    <test started-at="2024-08-29T20:55:48 ICT" name="Default test" finished-at="2024-08-29T20:55:58 ICT" duration-ms="10210">
+    <test started-at="2024-09-08T21:24:17 ICT" name="Default test" finished-at="2024-09-08T21:24:34 ICT" duration-ms="16712">
       <class name="WebDriver.Topic_20_Handle_Button_Radio_CheckBox">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@4c371370]" started-at="2024-08-29T20:55:48 ICT" name="BeforeClass" finished-at="2024-08-29T20:55:50 ICT" duration-ms="2427" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:17 ICT" name="BeforeClass" finished-at="2024-09-08T21:24:20 ICT" duration-ms="2139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="TC_02_Button()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@4c371370]" started-at="2024-08-29T20:55:50 ICT" name="TC_02_Button" finished-at="2024-08-29T20:55:56 ICT" duration-ms="6298" status="PASS">
+        <test-method signature="TC_08_Check_By_Customer_Email()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:20 ICT" name="TC_08_Check_By_Customer_Email" finished-at="2024-09-08T21:24:33 ICT" duration-ms="12925" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_Button -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@4c371370]" started-at="2024-08-29T20:55:56 ICT" name="AfterClass" finished-at="2024-08-29T20:55:58 ICT" duration-ms="1426" status="PASS">
+        </test-method> <!-- TC_08_Check_By_Customer_Email -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:33 ICT" name="AfterClass" finished-at="2024-09-08T21:24:34 ICT" duration-ms="1573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->

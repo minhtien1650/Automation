@@ -5,7 +5,7 @@
     <classes>
       <class name="WebDriver.Topic_20_Handle_Button_Radio_CheckBox">
         <methods>
-          <include name="TC_02_Button"/>
+          <include name="TC_08_Check_By_Customer_Email"/>
           <include name="BeforeClass"/>
           <include name="AfterClass"/>
         </methods>
