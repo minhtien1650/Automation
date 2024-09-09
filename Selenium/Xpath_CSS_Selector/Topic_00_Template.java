@@ -28,6 +28,15 @@ public class Topic_00_Template {
 	public void f() {
 	}
 	
+	public void sleepInSecond(long second) {
+		try {
+			Thread.sleep(second * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	@AfterClass
 	public void AfterClass() {
 		driver.quit();

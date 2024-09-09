@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-08T21:24:17 ICT" name="Default suite" finished-at="2024-09-08T21:24:34 ICT" duration-ms="16712">
+  <suite started-at="2024-09-15T18:06:24 ICT" name="Default suite" finished-at="2024-09-15T18:06:34 ICT" duration-ms="10175">
     <groups>
     </groups>
-    <test started-at="2024-09-08T21:24:17 ICT" name="Default test" finished-at="2024-09-08T21:24:34 ICT" duration-ms="16712">
-      <class name="WebDriver.Topic_20_Handle_Button_Radio_CheckBox">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:17 ICT" name="BeforeClass" finished-at="2024-09-08T21:24:20 ICT" duration-ms="2139" status="PASS">
+    <test started-at="2024-09-15T18:06:24 ICT" name="Default test" finished-at="2024-09-15T18:06:34 ICT" duration-ms="10175">
+      <class name="WebDriver.Topic_25_Handle_Popup">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:WebDriver.Topic_25_Handle_Popup@18078bef]" started-at="2024-09-15T18:06:24 ICT" name="BeforeClass" finished-at="2024-09-15T18:06:26 ICT" duration-ms="2037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="TC_08_Check_By_Customer_Email()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:20 ICT" name="TC_08_Check_By_Customer_Email" finished-at="2024-09-08T21:24:33 ICT" duration-ms="12925" status="PASS">
+        <test-method signature="TC_03_Random_Popup_Not_In_DOM()[pri:0, instance:WebDriver.Topic_25_Handle_Popup@18078bef]" started-at="2024-09-15T18:06:26 ICT" name="TC_03_Random_Popup_Not_In_DOM" finished-at="2024-09-15T18:06:32 ICT" duration-ms="6638" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_08_Check_By_Customer_Email -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_20_Handle_Button_Radio_CheckBox@459e9125]" started-at="2024-09-08T21:24:33 ICT" name="AfterClass" finished-at="2024-09-08T21:24:34 ICT" duration-ms="1573" status="PASS">
+        </test-method> <!-- TC_03_Random_Popup_Not_In_DOM -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:WebDriver.Topic_25_Handle_Popup@18078bef]" started-at="2024-09-15T18:06:32 ICT" name="AfterClass" finished-at="2024-09-15T18:06:34 ICT" duration-ms="1443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-      </class> <!-- WebDriver.Topic_20_Handle_Button_Radio_CheckBox -->
+      </class> <!-- WebDriver.Topic_25_Handle_Popup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
