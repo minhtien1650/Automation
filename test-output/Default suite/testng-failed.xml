@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriver.Topic_25_Handle_Popup">
+      <class name="WebDriver.Topic_28_Javascript_Executor">
         <methods>
           <include name="BeforeClass"/>
-          <include name="TC_03_Random_Popup_Not_In_DOM"/>
           <include name="AfterClass"/>
+          <include name="TC_04_Remove_Attribute"/>
         </methods>
-      </class> <!-- WebDriver.Topic_25_Handle_Popup -->
+      </class> <!-- WebDriver.Topic_28_Javascript_Executor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
