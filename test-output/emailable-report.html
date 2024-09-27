@@ -9,18 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">18,316</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,368</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">WebDriver.Topic_28_Javascript_Executor</td><td><a href="#m0">TC_04_Remove_Attribute</a></td><td rowspan="1">1726982869341</td><td rowspan="1">14291</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">WebDriver.Topic_35_WebDriver_Wait_V_Fluent</td><td><a href="#m0">TC_04_Page_Ready</a></td><td rowspan="1">1728394296274</td><td rowspan="1">37427</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">WebDriver.Topic_28_Javascript_Executor#TC_04_Remove_Attribute</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [1975-04-30] but found []
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at WebDriver.Topic_28_Javascript_Executor.TC_04_Remove_Attribute(Topic_28_Javascript_Executor.java:206)
+<h2>Default test</h2><h3 id="m0">WebDriver.Topic_35_WebDriver_Wait_V_Fluent#TC_04_Page_Ready</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for WebDriver.Topic_35_WebDriver_Wait_V_Fluent$3@6e33c391 (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 129.0.2792.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61332}, msedge: {msedgedriverVersion: 129.0.2792.79 (47754e458450..., userDataDir: C:\Users\tiend\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61332/devtoo..., se:cdpVersion: 129.0.2792.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 313e6c51e7e92a874eb7ce1fc573ec38
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at WebDriver.Topic_35_WebDriver_Wait_V_Fluent.isPageLoadSuccess(Topic_35_WebDriver_Wait_V_Fluent.java:141)
+	at WebDriver.Topic_35_WebDriver_Wait_V_Fluent.TC_04_Page_Ready(Topic_35_WebDriver_Wait_V_Fluent.java:108)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -33,6 +33,6 @@
 	<classpathentry kind="lib" path="libraries/slf4j-api-2.0.13.jar"/>
 	<classpathentry kind="lib" path="libraries/testng-7.10.0.jar" sourcepath="SourceDocs/testng-7.10.0-sources.jar"/>
 	<classpathentry kind="lib" path="libraries/webdrivermanager-5.9.2.jar"/>
-	<classpathentry kind="lib" path="libraries/selenium-server-4.23.1.jar" sourcepath="SourceDocs/selenium-api-4.23.1-sources.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-server-4.23.1.jar" sourcepath="SourceDocs/selenium-support-4.23.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="User Mode">
+	<test name="Run on Edge">
+		<classes>
+			<class name="TestNG.Topic_01_Annotation" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
