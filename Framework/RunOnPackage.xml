@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="All Suite">
+
+	<listeners>
+		<listener class-name="Listener.ExtentReport" />
+	</listeners>
+
+	<test name="Run on Package">
+		<packages>
+			<package name="TestNG" />
+		</packages>
+	</test>
+</suite>

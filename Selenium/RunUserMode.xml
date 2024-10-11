@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="User Mode">
+
+	<test name="Run on User">
+		<classes>
+			<class name="TestNG.Topic_09_Multiple_Suite_User" />
+		</classes>
+	</test>
+</suite>

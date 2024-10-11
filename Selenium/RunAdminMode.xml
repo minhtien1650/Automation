@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Admin Mode">
+
+	<test name="Run on Edge">
+		<classes>
+			<class name="TestNG.Topic_09_Multiple_Suite_Admin" />
+		</classes>
+	</test>
+</suite>

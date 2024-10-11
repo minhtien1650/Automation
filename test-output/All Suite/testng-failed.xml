@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Suite]">
+  <listeners>
+    <listener class-name="Listener.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="Run on Package(failed)">
+    <classes>
+      <class name="TestNG.Topic_08_TimeOut">
+        <methods>
+          <include name="TC_01"/>
+        </methods>
+      </class> <!-- TestNG.Topic_08_TimeOut -->
+      <class name="TestNG.Topic_10_Dependence">
+        <methods>
+          <include name="TC_01_Create_Account"/>
+          <include name="TC_02_Edit_Account"/>
+          <include name="TC_03_View_Account"/>
+        </methods>
+      </class> <!-- TestNG.Topic_10_Dependence -->
+    </classes>
+  </test> <!-- Run on Package(failed) -->
+</suite> <!-- Failed suite [All Suite] -->
